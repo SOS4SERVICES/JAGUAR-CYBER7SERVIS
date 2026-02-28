@@ -1,0 +1,131 @@
+/* ===== Tipografía ===== */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* ===== Header ===== */
+.site-header {
+    background-color: #f97316; /* naranja */
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.site-header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.site-header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+/* ===== Imagen App ===== */
+.app-image {
+    max-width: 400px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.app-image img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 1rem;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* ===== Contenido principal ===== */
+.content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+}
+
+.content-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.content-card h2 {
+    color: #f97316;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.content-card h3 {
+    color: #fb923c;
+    margin-top: 1.5rem;
+    font-size: 1.4rem;
+}
+
+.content-card ul {
+    list-style: disc inside;
+    margin-top: 0.5rem;
+}
+
+.content-card a {
+    color: #f97316;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.content-card a:hover {
+    color: #d97706;
+}
+
+/* ===== Botón de regreso ===== */
+.back-button {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.back-button a {
+    display: inline-block;
+    background-color: #f97316;
+    color: #fff;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.back-button a:hover {
+    background-color: #ea580c;
+    transform: scale(1.05);
+}
+
+/* ===== Footer ===== */
+.site-footer {
+    background-color: #fed7aa;
+    color: #7c2d12;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+    border-radius: 1rem 1rem 0 0;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .site-header h1 {
+        font-size: 2rem;
+    }
+    .content-card {
+        padding: 1rem;
+    }
+    .back-button a {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rutinas Progresivas - EnergyLab</title>
+  <meta name="description" content="Rutinas progresivas de gimnasio: ascendentes, descendentes y combinadas con 4 semanas de progresión y guía descargable.">
+  <style>
+    :root{
+      --accent-start: #e63946;
+      --accent-end: #f77f00;
+      --bg: #f6f8fa;
+      --card: #ffffff;
+      --text: #222;
+      --muted: #666;
+      --green: #1b5e20;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      padding:28px;
+    }
+    .container{max-width:1100px;margin:0 auto}
+    header{
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+      background:linear-gradient(90deg,var(--accent-start),var(--accent-end));
+      color:white;padding:14px 20px;border-radius:12px;margin-bottom:18px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.12);
+    }
+    header h1{font-size:1.2rem;margin:0}
+    .header-actions{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{
+      background:linear-gradient(90deg,var(--accent-start),var(--accent-end));
+      color:white;padding:8px 12px;border-radius:10px;text-decoration:none;font-weight:700;border:none;
+      box-shadow:0 3px 8px rgba(0,0,0,0.08);
+    }
+    .btn-ghost{
+      background:rgba(255,255,255,0.12);color:white;padding:8px 12px;border-radius:10px;text-decoration:none;font-weight:700;border:1px solid rgba(255,255,255,0.12)
+    }
+    .intro{
+      background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06);
+      margin-bottom:18px;
+    }
+    .intro h2{color:var(--accent-start);margin:0 0 6px 0}
+    .meta{color:var(--muted);font-size:0.95rem;margin-bottom:8px}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:16px;margin-bottom:18px;
+    }
+    .card{
+      background:var(--card);padding:16px;border-radius:12px;border:1px solid #eef2f5;
+      box-shadow:0 4px 12px rgba(0,0,0,0.04);
+    }
+    .card h3{margin:6px 0;color:var(--green)}
+    .sub{color:var(--muted);font-size:0.95rem}
+    ul{margin:10px 0 0 18px}
+    table{width:100%;border-collapse:collapse;margin-top:10px}
+    th,td{padding:8px;border:1px solid #eef2f5;text-align:center;font-size:0.95rem}
+    th{background:linear-gradient(90deg,#fff5f5,#fff7ef);font-weight:700;color:var(--accent-start)}
+    .emoji{font-size:1.05rem;margin-right:8px}
+    .tip{background:#fff8e6;padding:10px;border-radius:8px;border:1px solid #fff0d9;margin-top:10px;color:#7a4a12}
+    .muscles{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+    .muscle{background:#f1fbf6;color:#0b7a45;padding:6px 8px;border-radius:999px;font-weight:700;font-size:0.85rem}
+    .small{font-size:0.88rem;color:var(--muted)}
+    footer{margin-top:18px;text-align:center;color:var(--muted)}
+    @media (max-width:520px){
+      header{flex-direction:column;align-items:flex-start;gap:10px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🏋️‍♂️ Rutinas Progresivas — EnergyLab</h1>
+      <div class="header-actions">
+        <a href="../index.html" class="btn-ghost">⬅️ Regresar</a>
+        
+      
+        <a href="https://TU-LINK-AQUI" class="btn" target="_blank">📥 Descargar Guía de Musculación</a>
+
+      </div>
+    </header>
+
+    <section class="intro">
+      <h2>Programas intensos con incremento controlado de cargas</h2>
+      <p class="meta">Aquí tienes 3 rutinas completas (Ascendente, Descendente y Combinada). Cada una incluye: calentamiento, progresión 4 semanas, accesorios, descanso, tempo y músculos trabajados. Ajusta pesos según tu nivel.</p>
+      <p class="small"><strong>Nota:</strong> Si no conoces tu 1RM usa RPE (esfuerzo percibido) aproximado: RPE 7 = esfuerzo moderado, RPE 9 = cercano al fallo.</p>
+    </section>
+
+    <!-- GRID con 3 rutinas -->
+    <div class="grid">
+
+      <!-- Rutina 1: Ascendente - Press de Banca -->
+      <div class="card" id="rutina-ascendente">
+        <h3><span class="emoji">🔥</span> Rutina Ascendente — Press de Banca (Pecho)</h3>
+        <p class="sub">Aumento de carga cada serie. Ideal para fuerza y tensión mecánica progresiva.</p>
+
+        <p class="small"><strong>Calentamiento:</strong> 8-10 min cardio suave + movilidad de hombros + 2-3 series con barra vacía (15-12 rep).</p>
+
+        <h4 style="margin-top:10px">Progresión 4 semanas (main lift)</h4>
+        <table>
+          <thead><tr><th>Semana</th><th>Esquema (sets x reps)</th><th>% 1RM (orient.) / RPE</th></tr></thead>
+          <tbody>
+            <tr><td>Semana 1</td><td>5 x (12 / 10 / 8 / 6 / 4)</td><td>60% → 80% (RPE 6–8)</td></tr>
+            <tr><td>Semana 2</td><td>5 x (10 / 8 / 6 / 5 / 3)</td><td>65% → 85% (RPE 7–8.5)</td></tr>
+            <tr><td>Semana 3</td><td>5 x (8 / 6 / 5 / 4 / 2-3)</td><td>70% → 90% (RPE 8–9)</td></tr>
+            <tr><td>Semana 4 (deload)</td><td>3 x 8 @60-65%</td><td>RPE 6 (recuperación)</td></tr>
+          </tbody>
+        </table>
+
+        <h4 style="margin-top:10px">Accesorios</h4>
+        <ul>
+          <li>Press inclinado con mancuernas — 3x8–12 🏹</li>
+          <li>Fondos en paralelas o con banco — 3x8–12 💪</li>
+          <li>Aperturas con mancuernas — 3x12–15 🌸</li>
+          <li>Core: Planchas 3x30–45s 🧭</li>
+        </ul>
+
+        <div class="muscles">
+          <span class="muscle">Pecho</span><span class="muscle">Tríceps</span><span class="muscle">Deltoides ant.</span>
+        </div>
+
+        <div class="tip">
+          ✅ <strong>Tips:</strong> Mantén escapulas retraídas, controla la bajada (tempo 2-0-1-0), respira fuerte en la fase concéntrica. Aumenta peso solo si puedes mantener técnica.
+        </div>
+      </div>
+
+      <!-- Rutina 2: Descendente - Sentadillas -->
+      <div class="card" id="rutina-descendente">
+        <h3><span class="emoji">⚡</span> Rutina Descendente — Sentadillas (Pierna)</h3>
+        <p class="sub">Piramidal descendente: comienza pesado y reduce carga aumentando repeticiones — trabaja fuerza y resistencia en la misma sesión.</p>
+
+        <p class="small"><strong>Calentamiento:</strong> 8-10 min movilidad cadera + activación glúteo + 2 series ligeras de 10 sentadillas.</p>
+
+        <h4 style="margin-top:10px">Progresión 4 semanas (main lift)</h4>
+        <table>
+          <thead><tr><th>Semana</th><th>Esquema (sets x reps)</th><th>% 1RM (orient.) / RPE</th></tr></thead>
+          <tbody>
+            <tr><td>Semana 1</td><td>5 x (4 / 6 / 8 / 10 / 12)</td><td>85% → 65% (RPE 8 → 7)</td></tr>
+            <tr><td>Semana 2</td><td>5 x (5 / 7 / 9 / 11 / 13)</td><td>86-88% → 66-68% (RPE 8 → 7)</td></tr>
+            <tr><td>Semana 3</td><td>5 x (4 / 6 / 8 / 10 / 12) (sube 2–5% en pesos)</td><td>88% → 68% (RPE 8.5)</td></tr>
+            <tr><td>Semana 4 (deload)</td><td>3 x 8 @60–65%</td><td>RPE 6</td></tr>
+          </tbody>
+        </table>
+
+        <h4 style="margin-top:10px">Accesorios</h4>
+        <ul>
+          <li>Peso muerto rumano — 3x8–10 🦵</li>
+          <li>Zancadas caminando — 3x10 por pierna 🚶‍♂️</li>
+          <li>Elevaciones de gemelo — 3x15–20 🐾</li>
+          <li>Core: Dead bugs 3x12 por lado 🧭</li>
+        </ul>
+
+        <div class="muscles">
+          <span class="muscle">Cuádriceps</span><span class="muscle">Glúteos</span><span class="muscle">Isquiotibiales</span>
+        </div>
+
+        <div class="tip">
+          ✅ <strong>Tips:</strong> Mantén el core apretado, profundidad controlada (paralela o un poco más abajo si tu movilidad lo permite). Prioriza técnica antes de añadir carga.
+        </div>
+      </div>
+
+      <!-- Rutina 3: Combinada - Espalda -->
+      <div class="card" id="rutina-combinada">
+        <h3><span class="emoji">💪</span> Rutina Combinada — Espalda (Dominadas / Remo)</h3>
+        <p class="sub">Combina esquema ascendente para dominante (dominadas/remos) y descendente en accesorios — fuerza, densidad y trabajo de agarre.</p>
+
+        <p class="small"><strong>Calentamiento:</strong> 6-8 min movilidad de hombros + rotaciones + 2 series de remo ligero.</p>
+
+        <h4 style="margin-top:10px">Progresión 4 semanas (ejercicios clave)</h4>
+        <table>
+          <thead><tr><th>Semana</th><th>Dominantes (sets x reps)</th><th>Remo (sets x reps)</th></tr></thead>
+          <tbody>
+            <tr><td>Semana 1</td><td>Dominadas asist. 4x8–10 (o negativas)</td><td>Remo barra 4x8–10 (ascendiendo peso)</td></tr>
+            <tr><td>Semana 2</td><td>Dominadas lastradas 4x6–8 (o menos asistencia)</td><td>Remo 4x6–8 (más carga)</td></tr>
+            <tr><td>Semana 3</td><td>Dominadas lastradas 5x4–6 (foco en fuerza)</td><td>Remo pesado 5x5–6 (fuerza)</td></tr>
+            <tr><td>Semana 4 (deload)</td><td>Dominadas 3x6–8 sin carga (recuperación)</td><td>Remo 3x8 @60–70%</td></tr>
+          </tbody>
+        </table>
+
+        <h4 style="margin-top:10px">Accesorios</h4>
+        <ul>
+          <li>Jalones en polea o remo con agarre neutro — 3x10–12 🌀</li>
+          <li>Face pulls — 3x12–15 (salud del hombro) 🧷</li>
+          <li>Curl bíceps barra o alterno — 3x8–12 💥</li>
+          <li>Agarre: Farmer carries 2x40–60s (opcional) 🧱</li>
+        </ul>
+
+        <div class="muscles">
+          <span class="muscle">Dorsales</span><span class="muscle">Romboides</span><span class="muscle">Trapecio</span><span class="muscle">Bíceps</span>
+        </div>
+
+        <div class="tip">
+          ✅ <strong>Tips:</strong> Si no puedes hacer dominadas, usa bandas de asistencia o remo invertido. En remos, prioriza la retracción escapular y no tirar con los brazos solamente.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Recomendaciones generales -->
+    <section class="card" style="margin-bottom:14px;">
+      <h3><span class="emoji">📋</span> Recomendaciones Generales</h3>
+      <ul>
+        <li>Descanso entre series: Fuerza pesada 2–3 min; Hipertrofia 60–90s; Accesorios 45–60s ⏱️</li>
+        <li>Tempo sugerido: 2-1-1-0 (eccéntrico - pause - concéntrico - no pause) salvo indicación distinta.</li>
+        <li>Registro: Anota pesos y RPE para progresar semana a semana 📈.</li>
+        <li>Seguridad: Usa spotter para cargas máximas o cinturón si es necesario. Siempre prioriza técnica.</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>ℹ️ Estas rutinas son ejemplos intensos y generales. Ajusta cargas a tu experiencia y consulta a un profesional si tienes lesiones o condiciones médicas.</p>
+    </footer>
+  </div>
+</body>
+</html>

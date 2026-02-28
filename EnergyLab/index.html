@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EnergyLab - Rutinas y Dietas Fitness</title>
+  <meta name="description" content="EnergyLab: rutinas, dietas y consejos fitness para transformar tu energía en resultados.">
+
+  <!-- ===== Cabeceras de seguridad ===== -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' https://cdn.tailwindcss.com 'unsafe-inline';
+    style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com;
+    img-src 'self' data: https:;
+    font-src 'self';
+    connect-src 'self';
+    frame-src 'none';
+    object-src 'none';
+  ">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="EnergyLab/style.css">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-red-600 text-white shadow fixed top-0 w-full z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-extrabold tracking-wide">🏋️‍♂️ EnergyLab</h1>
+      <nav>
+        <ul class="flex gap-6 text-lg font-medium">
+          <li><a href="../index.html" class="hover:underline">Inicio</a></li>
+          <li><a href="#rutinas" class="hover:underline">Rutinas</a></li>
+          <li><a href="#dietas" class="hover:underline">Dietas</a></li>
+          <li><a href="#retos" class="hover:underline">Retos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-r from-red-600 to-orange-500 text-white text-center py-20 mt-16 shadow-lg">
+    <h2 class="text-5xl font-extrabold">Transforma tu energía en resultados</h2>
+    <p class="mt-4 text-lg max-w-2xl mx-auto">Rutinas personalizadas, dietas efectivas y retos diseñados para potenciar tu cuerpo y mente.</p>
+  </section>
+
+  <!-- Secciones principales -->
+  <main class="max-w-6xl mx-auto p-6 grid md:grid-cols-2 gap-6 mt-10">
+
+    <!-- Rutina -->
+    <article id="rutinas" class="card-fitness">
+      <h3 class="text-2xl font-bold text-red-600">Rutina de Fuerza</h3>
+      <p class="mt-2">Programa de 4 semanas para ganar masa muscular y fuerza progresiva en el gimnasio.</p>
+      <a href="noticias/noticia1.html" class="btn-link">Ver rutina →</a>
+    </article>
+
+    <!-- Dieta -->
+    <article id="dietas" class="card-fitness">
+      <h3 class="text-2xl font-bold text-green-600">Dieta Balanceada</h3>
+      <p class="mt-2">Plan nutricional de 2000 kcal ideal para mantener energía y definición.</p>
+      <a href="noticias/noticia2.html" class="btn-link">Ver dieta →</a>
+    </article>
+
+    <!-- Reto -->
+    <article id="retos" class="card-fitness">
+      <h3 class="text-2xl font-bold text-orange-600">Reto 30 Días</h3>
+      <p class="mt-2">Un desafío progresivo de 30 días con entrenamientos diarios de alta intensidad.</p>
+      <a href="noticias/noticia3.html" class="btn-link">Unirme al reto →</a>
+    </article>
+
+    <!-- Tips -->
+    <article class="card-fitness">
+      <h3 class="text-2xl font-bold text-blue-600">Tips Rápidos</h3>
+      <p class="mt-2">Consejos prácticos sobre hidratación, recuperación y suplementos.</p>
+      <a href="noticias/noticia4.html" class="btn-link">Leer más →</a>
+    </article>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6 mt-8">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
+      <p>&copy; 2025 EnergyLab - Rutinas y Dietas</p>
+      <div class="flex gap-4 mt-4 md:mt-0">
+        <a href="../privacidad.html" class="footer-link">Política de privacidad</a>
+        <a href="../cookies.html" class="footer-link">Cookies</a>
+        <a href="../terminos.html" class="footer-link">Términos</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

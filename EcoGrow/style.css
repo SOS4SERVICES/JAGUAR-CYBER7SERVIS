@@ -1,0 +1,80 @@
+/* ===== Tipografía y base ===== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Nunito:wght@600&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f0fdf4;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+/* ===== Encabezado ===== */
+header h1 {
+  font-family: 'Nunito', sans-serif;
+  letter-spacing: 1px;
+}
+
+header nav a {
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #bbf7d0;
+}
+
+/* ===== Tarjetas ===== */
+.card-eco {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid #d1fae5;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-eco:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.card-eco h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #15803d;
+}
+
+.card-eco p {
+  margin-top: 0.5rem;
+  color: #374151;
+}
+
+/* ===== Botones / Links ===== */
+.btn-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #15803d;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.btn-link:hover {
+  color: #16a34a;
+  text-decoration: underline;
+}
+
+/* ===== Footer ===== */
+footer {
+  font-size: 0.9rem;
+  border-top: 1px solid #14532d;
+}
+
+.footer-link {
+  color: #bbf7d0;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #86efac;
+}
+

@@ -1,0 +1,149 @@
+/* ===== Google Fonts ===== */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Roboto+Mono&display=swap");
+
+/* ===== Base ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  background: transparent;
+  color: #00ffea;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ===== MATRIX CANVAS ===== */
+#matrix {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: black;
+}
+
+/* ===== HEADER NEON ===== */
+header {
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  box-shadow: 0 0 20px #00ffea;
+  border-bottom: 2px solid #00ffea;
+}
+
+header h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2rem;
+  color: #00ffea;
+  text-shadow: 0 0 5px #00ffea, 0 0 15px #00ffea;
+  animation: neonPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes neonPulse {
+  from {
+    text-shadow: 0 0 5px #00ffea, 0 0 15px #00ffea;
+  }
+  to {
+    text-shadow: 0 0 10px #ff00ff, 0 0 25px #00ffea;
+  }
+}
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  background: rgba(0, 0, 0, 0.65);
+  border: 1px solid rgba(0, 255, 234, 0.25);
+}
+
+.hero h2 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 3rem;
+  text-shadow: 0 0 5px #00ffea, 0 0 20px #ff00ff;
+  animation: glitch 1.5s infinite;
+}
+
+.hero p {
+  color: #a0ffea;
+}
+
+.hero a {
+  border: 2px solid #00ffea;
+  box-shadow: 0 0 15px #00ffea;
+}
+
+.hero a:hover {
+  background: #00ffea;
+  color: #0a0a23;
+  box-shadow: 0 0 25px #ff00ff;
+}
+
+/* ===== GLITCH ===== */
+@keyframes glitch {
+  0% { text-shadow: 2px 0 #ff00ff, -2px 0 #00ffea; }
+  50% { text-shadow: -2px 0 #ff00ff, 2px 0 #00ffea; }
+  100% { text-shadow: 2px 0 #00ffea, -2px 0 #ff00ff; }
+}
+
+/* ===== ARTÍCULOS ===== */
+.articles article {
+  background: rgba(16, 24, 51, 0.9);
+  padding: 1.5rem;
+  border-left: 4px solid #00ffea;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 15px rgba(0, 255, 234, 0.4);
+  transition: all 0.3s ease;
+}
+
+.articles article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px #ff00ff;
+}
+
+.articles h3 {
+  font-family: "Orbitron", sans-serif;
+}
+
+.articles p,
+.articles li {
+  color: #a0ffea;
+}
+
+.articles a {
+  color: #ffdd00;
+  font-weight: bold;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar div {
+  background: rgba(16, 24, 51, 0.9);
+  border: 1px solid #00ffea;
+  padding: 1.2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 10px #00ffea;
+}
+
+/* ===== CONTACTO ===== */
+.contacto {
+  background: rgba(15, 32, 39, 0.85);
+  border: 1px solid #00ffea;
+  box-shadow: 0 0 20px #00ffea;
+  border-radius: 10px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #0a0a23;
+  border-top: 2px solid #00ffea;
+  text-shadow: 0 0 5px #00ffea;
+}
+
+footer a:hover {
+  color: #ffdd00;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+}

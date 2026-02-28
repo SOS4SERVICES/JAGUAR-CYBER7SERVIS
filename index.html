@@ -1,1 +1,192 @@
-<h1> hola mundo </h1>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mi Web Mza</title>
+  <meta name="description" content="Blog con artículos virales, noticias y entretenimiento.">
+
+  <!-- ================= SEGURIDAD ================= -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline'
+      https://cdn.tailwindcss.com
+      https://pagead2.googlesyndication.com
+      https://www.googletagservices.com
+      https://www.google-analytics.com;
+    style-src 'self' 'unsafe-inline'
+      https://cdn.tailwindcss.com
+      https://fonts.googleapis.com;
+    img-src 'self' data: https:
+      https://*.googlesyndication.com
+      https://*.googleusercontent.com;
+    font-src 'self' https://fonts.gstatic.com;
+    connect-src 'self'
+      https://www.google-analytics.com
+      https://pagead2.googlesyndication.com;
+    frame-src
+      https://pagead2.googlesyndication.com
+      https://googleads.g.doubleclick.net;
+    object-src 'none';
+    base-uri 'self';
+    frame-ancestors 'none';
+    upgrade-insecure-requests;
+  ">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    #matrix {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background: black;
+    }
+  </style>
+</head>
+
+<body class="text-gray-100">
+
+  <!-- Fondo Matrix -->
+  <canvas id="matrix"></canvas>
+
+  <!-- Header -->
+  <header class="bg-gray-800/80 backdrop-blur-sm fixed top-0 w-full z-50 shadow">
+    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+      <h1 class="text-xl md:text-2xl font-bold">jaguar-byte.site 🌐</h1>
+
+      <!-- Desktop nav -->
+      <nav class="hidden md:block">
+        <ul class="flex gap-6 text-lg">
+          <li><a href="#" class="hover:underline">Inicio</a></li>
+          <li><a href="#articulos" class="hover:underline">Categoría</a></li>
+          <li><a href="#contacto" class="hover:underline">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Mobile nav -->
+    <div class="md:hidden text-center pb-3 text-sm">
+      <a href="#articulos" class="mx-3">Artículos</a>
+      <a href="#contacto" class="mx-3">Contacto</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero text-center py-16 md:py-24 mt-28 md:mt-20 mx-4">
+    <h2 class="text-2xl md:text-4xl font-extrabold">
+      Domina el Futuro: Innovación y Sostenibilidad
+    </h2>
+    <p class="mt-4 max-w-2xl mx-auto text-sm md:text-base">
+      Explora cómo la innovación y la sostenibilidad están redefiniendo el futuro.
+    </p>
+    <a href="#articulos"
+      class="mt-6 inline-block bg-gray-600 px-6 py-3 rounded-lg hover:bg-gray-500">
+      Ver artículos
+    </a>
+  </section>
+
+  <!-- Contenido -->
+  <main id="articulos" class="max-w-6xl mx-auto p-6 grid md:grid-cols-3 gap-6">
+
+    <div class="md:col-span-2 space-y-6 articles">
+      <article>
+        <h3>📲 Click&GoApps!</h3>
+        <p>Las mejores apps Android en un solo lugar.</p>
+        <a href="Click&GoApps/index.html">Leer más →</a>
+      </article>
+
+      <article>
+        <h3>🌱 EcoGrow</h3>
+        <p>Hidroponía, acuicultura y frutales sostenibles.</p>
+        <a href="EcoGrow/index.html">Leer más →</a>
+      </article>
+
+      <article>
+        <h3>⚡ EnergyLab</h3>
+        <p>Entrena cuerpo y mente con rutinas inteligentes.</p>
+        <a href="EnergyLab/index.html">Leer más →</a>
+      </article>
+    </div>
+
+    <!-- Sidebar Ads -->
+    <aside class="space-y-6">
+      <div>📢 Espacio para Google AdSense</div>
+      <div>📢 Banner secundario</div>
+    </aside>
+
+  </main>
+
+  <!-- Contacto -->
+  <section id="contacto" class="p-6 text-center">
+    <p>
+      Publicidad:
+      <a href="mailto:contacto@tudominio.com" class="underline">
+        contacto@tudominio.com
+      </a>
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center p-4 text-sm">
+    <p>&copy; 2025 Mi Web Monetizada</p>
+    <div class="space-x-4">
+      <a href="privacidad.html">Privacidad</a>
+      <a href="cookies.html">Cookies</a>
+      <a href="terminos.html">Términos</a>
+    </div>
+  </footer>
+
+  <!-- Matrix Script (Optimizado móvil) -->
+  <script>
+    "use strict";
+
+    const canvas = document.getElementById("matrix");
+    const ctx = canvas.getContext("2d");
+
+    const letters = "01";
+    const fontSize = 14;
+    let columns, drops;
+
+    function setupMatrix() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      columns = Math.floor(canvas.width / fontSize);
+      drops = Array(columns).fill(1);
+    }
+
+    setupMatrix();
+    window.addEventListener("resize", setupMatrix);
+
+    const isMobile = window.innerWidth < 768;
+    const frameDelay = isMobile ? 60 : 33;
+
+    function draw() {
+      ctx.fillStyle = "rgba(0,0,0,0.05)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.font = fontSize + "px monospace";
+      ctx.fillStyle = "#00ff00";
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = letters[Math.floor(Math.random() * letters.length)];
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.98) {
+          drops[i] = 0;
+        }
+        drops[i]++;
+      }
+    }
+
+    setInterval(draw, frameDelay);
+  </script>
+
+</body>
+</html>
