@@ -1,192 +1,98 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOS4 & JL SERVICES</title>
 
-  <title>Mi Web Mza</title>
-  <meta name="description" content="Blog con artículos virales, noticias y entretenimiento.">
+<link rel="stylesheet" href="styles.css">
 
-  <!-- ================= SEGURIDAD ================= -->
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
+<!-- SEO -->
+<meta name="description" content="Desarrollo web, marketing digital y soluciones industriales en México.">
+<meta name="keywords" content="desarrollo web, marketing, automatización, Tabasco">
 
-  <meta http-equiv="Content-Security-Policy" content="
-    default-src 'self';
-    script-src 'self' 'unsafe-inline'
-      https://cdn.tailwindcss.com
-      https://pagead2.googlesyndication.com
-      https://www.googletagservices.com
-      https://www.google-analytics.com;
-    style-src 'self' 'unsafe-inline'
-      https://cdn.tailwindcss.com
-      https://fonts.googleapis.com;
-    img-src 'self' data: https:
-      https://*.googlesyndication.com
-      https://*.googleusercontent.com;
-    font-src 'self' https://fonts.gstatic.com;
-    connect-src 'self'
-      https://www.google-analytics.com
-      https://pagead2.googlesyndication.com;
-    frame-src
-      https://pagead2.googlesyndication.com
-      https://googleads.g.doubleclick.net;
-    object-src 'none';
-    base-uri 'self';
-    frame-ancestors 'none';
-    upgrade-insecure-requests;
-  ">
-
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="style.css">
-
-  <style>
-    #matrix {
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      background: black;
-    }
-  </style>
+<!-- PARTICLES -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 </head>
 
-<body class="text-gray-100">
+<body>
 
-  <!-- Fondo Matrix -->
-  <canvas id="matrix"></canvas>
+<div id="tsparticles"></div>
+<div class="cursor-glow" id="cursorGlow"></div>
 
-  <!-- Header -->
-  <header class="bg-gray-800/80 backdrop-blur-sm fixed top-0 w-full z-50 shadow">
-    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
-      <h1 class="text-xl md:text-2xl font-bold">jaguar-byte.site 🌐</h1>
+<nav>
+  <h2>SOS4 & JL SERVICES</h2>
+  <div>
+    <a href="#services">Servicios</a>
+    <a href="#portfolio">Proyectos</a>
+    <a href="#contact">Contacto</a>
+  </div>
+</nav>
 
-      <!-- Desktop nav -->
-      <nav class="hidden md:block">
-        <ul class="flex gap-6 text-lg">
-          <li><a href="#" class="hover:underline">Inicio</a></li>
-          <li><a href="#articulos" class="hover:underline">Categoría</a></li>
-          <li><a href="#contacto" class="hover:underline">Contacto</a></li>
-        </ul>
-      </nav>
+<section class="hero reveal">
+  <h1>
+  Aumenta tus clientes con 
+  <span>tecnología, marketing y soluciones industriales</span>
+  </h1>
+
+  <p>Desarrollamos sistemas y estrategias que generan resultados reales.</p>
+
+  <button onclick="scrollToContact()">Contáctanos</button>
+</section>
+
+<section class="services reveal" id="services">
+  <h2>Servicios</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Desarrollo Web</h3>
+      <p>Websites optimizados para ventas.</p>
     </div>
-
-    <!-- Mobile nav -->
-    <div class="md:hidden text-center pb-3 text-sm">
-      <a href="#articulos" class="mx-3">Artículos</a>
-      <a href="#contacto" class="mx-3">Contacto</a>
+    <div class="card">
+      <h3>Marketing Digital</h3>
+      <p>Captación de clientes.</p>
     </div>
-  </header>
-
-  <!-- Hero -->
-  <section class="hero text-center py-16 md:py-24 mt-28 md:mt-20 mx-4">
-    <h2 class="text-2xl md:text-4xl font-extrabold">
-      Domina el Futuro: Innovación y Sostenibilidad
-    </h2>
-    <p class="mt-4 max-w-2xl mx-auto text-sm md:text-base">
-      Explora cómo la innovación y la sostenibilidad están redefiniendo el futuro.
-    </p>
-    <a href="#articulos"
-      class="mt-6 inline-block bg-gray-600 px-6 py-3 rounded-lg hover:bg-gray-500">
-      Ver artículos
-    </a>
-  </section>
-
-  <!-- Contenido -->
-  <main id="articulos" class="max-w-6xl mx-auto p-6 grid md:grid-cols-3 gap-6">
-
-    <div class="md:col-span-2 space-y-6 articles">
-      <article>
-        <h3>📲 Click&GoApps!</h3>
-        <p>Las mejores apps Android en un solo lugar.</p>
-        <a href="Click&GoApps/index.html">Leer más →</a>
-      </article>
-
-      <article>
-        <h3>🌱 EcoGrow</h3>
-        <p>Hidroponía, acuicultura y frutales sostenibles.</p>
-        <a href="EcoGrow/index.html">Leer más →</a>
-      </article>
-
-      <article>
-        <h3>⚡ EnergyLab</h3>
-        <p>Entrena cuerpo y mente con rutinas inteligentes.</p>
-        <a href="EnergyLab/index.html">Leer más →</a>
-      </article>
+    <div class="card">
+      <h3>Sistemas Industriales</h3>
+      <p>Automatización y soluciones técnicas.</p>
     </div>
+  </div>
+</section>
 
-    <!-- Sidebar Ads -->
-    <aside class="space-y-6">
-      <div>📢 Espacio para Google AdSense</div>
-      <div>📢 Banner secundario</div>
-    </aside>
+<section class="portfolio reveal" id="portfolio">
+  <h2>Proyectos</h2>
+  <div class="portfolio-grid">
+    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758">
+    <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231">
+    <img src="https://images.unsplash.com/photo-1581091870627-3c6d92f9f2c5">
+  </div>
+</section>
 
-  </main>
+<!-- CTA -->
+<section class="cta">
+  <h2>¿Listo para llevar tu empresa al siguiente nivel?</h2>
+  <p>Agenda una asesoría gratuita</p>
+  <a href="https://wa.me/521993XXXXXXX?text=Hola,%20quiero%20información" class="btn-cta">Hablar por WhatsApp</a>
+</section>
 
-  <!-- Contacto -->
-  <section id="contacto" class="p-6 text-center">
-    <p>
-      Publicidad:
-      <a href="mailto:contacto@tudominio.com" class="underline">
-        contacto@tudominio.com
-      </a>
-    </p>
-  </section>
+<section class="contact reveal" id="contact">
+  <h2>Contacto</h2>
 
-  <!-- Footer -->
-  <footer class="text-center p-4 text-sm">
-    <p>&copy; 2025 Mi Web Monetizada</p>
-    <div class="space-x-4">
-      <a href="privacidad.html">Privacidad</a>
-      <a href="cookies.html">Cookies</a>
-      <a href="terminos.html">Términos</a>
-    </div>
-  </footer>
+  <form action="https://formspree.io/f/TU_ID" method="POST">
+    <input type="text" name="nombre" placeholder="Nombre" required>
+    <input type="email" name="correo" placeholder="Correo" required>
+    <textarea name="mensaje" placeholder="Mensaje"></textarea>
+    <input type="hidden" name="origen" value="website_sos4">
+    <button class="submit">Enviar</button>
+  </form>
 
-  <!-- Matrix Script (Optimizado móvil) -->
-  <script>
-    "use strict";
+</section>
 
-    const canvas = document.getElementById("matrix");
-    const ctx = canvas.getContext("2d");
+<footer>
+  <p>© 2026 SOS4 & JL SERVICES</p>
+</footer>
 
-    const letters = "01";
-    const fontSize = 14;
-    let columns, drops;
+<a href="https://wa.me/521993XXXXXXX?text=Hola,%20quiero%20información%20sobre%20sus%20servicios" class="whatsapp">💬</a>
 
-    function setupMatrix() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      columns = Math.floor(canvas.width / fontSize);
-      drops = Array(columns).fill(1);
-    }
-
-    setupMatrix();
-    window.addEventListener("resize", setupMatrix);
-
-    const isMobile = window.innerWidth < 768;
-    const frameDelay = isMobile ? 60 : 33;
-
-    function draw() {
-      ctx.fillStyle = "rgba(0,0,0,0.05)";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.font = fontSize + "px monospace";
-      ctx.fillStyle = "#00ff00";
-
-      for (let i = 0; i < drops.length; i++) {
-        const text = letters[Math.floor(Math.random() * letters.length)];
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.98) {
-          drops[i] = 0;
-        }
-        drops[i]++;
-      }
-    }
-
-    setInterval(draw, frameDelay);
-  </script>
-
+<script src="script.js"></script>
 </body>
 </html>
